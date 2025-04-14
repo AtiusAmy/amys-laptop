@@ -12,6 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y gnome-shell-extension-appindicator gnome-shell-extension-caffeine tailscale android-tools gparted
 dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9
+dnf5 remove -y libfprint
 dnf5 install -y libfprint-tod-goodix
 
 # Use a COPR Example:
