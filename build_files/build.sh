@@ -10,7 +10,9 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+dnf5 install -y gnome-shell-extension-appindicator gnome-shell-extension-caffeine tailscale android-tools gparted
+dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9
+dnf5 install -y libfprint-tod-goodix
 
 # Use a COPR Example:
 #
@@ -21,4 +23,3 @@ dnf5 install -y tmux
 
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
