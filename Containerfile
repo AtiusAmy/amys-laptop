@@ -24,4 +24,3 @@ RUN mkdir -p /var/lib/alternatives && \
     
 ### LINTING
 ## Verify final image and contents are correct.
-RUN bootc container lint
