@@ -9,6 +9,10 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+dnf5 -y install terra-release-extras || true
+dnf5 config-manager setopt "terra*".enabled=0
+
 
 # this installs a package from fedora repos
 dnf5 install -y gnome-shell-extension-appindicator gnome-shell-extension-caffeine gnome-shell-extension-tailscale-gnome-qs gnome-shell-extension-blur-my-shell gnome-shell-extension-logo-menu rclone tailscale android-tools gparted micro
