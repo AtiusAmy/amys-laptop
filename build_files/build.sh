@@ -24,5 +24,6 @@ rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfraclou
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
+dnf5 -y copr disable antiderivative/libfprint-tod-goodix-0.0.9
 
 #### Example for enabling a System Unit File
