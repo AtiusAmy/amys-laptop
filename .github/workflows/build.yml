@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     - cron: "30 7 * * *" # 
-    push:
+  push:
     branches:
       - main
     paths-ignore:
