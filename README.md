@@ -1,3 +1,10 @@
+# Amy's personal image for laptop
+
+This is a mofified image of secureblue to include tools I use like adb, tailscale, and gnome extensions to eliminate layering
+
+an attempt has been made to make the fingerprint reader works but failed
+
+
 # image-template
 
 # Purpose
