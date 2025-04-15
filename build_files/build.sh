@@ -15,6 +15,7 @@ dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9
 dnf5 -y swap \
     --repo copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint-tod libfprint-tod
+dnf5 versionlock add libfprint-tod
 dnf5 intall -y libfprint-tod-goodix
 
 # Use a COPR Example:
