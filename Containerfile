@@ -1,10 +1,9 @@
 # Allow build scripts to be referenced without being copied into the final image
 # Base Image
-FROM scratch AS ctx
 
 FROM ghcr.io/secureblue/silverblue-main-hardened:latest
 COPY build_files/build.sh /tmp/build.sh
-
+COPY system_files/silverblue /
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
