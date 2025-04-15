@@ -28,4 +28,3 @@ dnf5 install -y libfprint-tod-goodix
 dnf5 -y copr disable antiderivative/libfprint-tod-goodix-0.0.9
 
 #### Example for enabling a System Unit File
-systemctl enable fprintd
