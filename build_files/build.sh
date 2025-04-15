@@ -18,7 +18,6 @@ dnf5 -y swap \
     libfprint-tod libfprint-tod
 dnf5 versionlock add libfprint-tod
 dnf5 install -y libfprint-tod-goodix
-dnf5 install -y libfprint
 
 # Use a COPR Example:
 #
