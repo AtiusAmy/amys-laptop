@@ -1,7 +1,7 @@
 # Allow build scripts to be referenced without being copied into the final image
 # Base Image
 
-FROM ghcr.io/secureblue/silverblue-main-hardened:latest
+FROM ghcr.io/secureblue/silverblue-main-hardened:br-staging-42
 COPY build_files/build.sh /tmp/build.sh
 COPY system_files/silverblue /
 
