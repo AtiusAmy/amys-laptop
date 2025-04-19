@@ -12,7 +12,7 @@ set -ouex pipefail
 dnf5 -y copr enable ublue-os/staging
 dnf5 -y copr enable ublue-os/packages
 # this installs a package from fedora repos
-dnf5 install -y gnome-shell-extension-appindicator bluefin-fastfetch fastfetch gnome-shell-extension-logo-menu gnome-shell-extension-tailscale-gnome-qs gnome-shell-extension-caffeine gnome-shell-extension-blur-my-shell rclone tailscale android-tools gparted micro
+dnf5 install -y gnome-shell-extension-appindicator gnome-shell-extension-logo-menu glorpfetch gnome-shell-extension-caffeine gnome-shell-extension-blur-my-shell rclone tailscale android-tools gparted micro
 dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9
 curl -o /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9.repo "https://copr.fedorainfracloud.org/coprs/antiderivative/libfprint-tod-goodix-0.0.9/repo/fedora-$(rpm -E %fedora)/antiderivative-libfprint-tod-goodix-0.0.9-fedora-$(rpm -E %fedora).repo"
 rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 --remove=libfprint libfprint-tod libfprint-tod-goodix
