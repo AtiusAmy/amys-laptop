@@ -20,7 +20,7 @@ dnf5 swap -y \
 # this installs a package from fedora repos
 dnf5 install -y adw-gtk3-theme gnome-shell-extension-appindicator gnome-shell-extension-logo-menu gnome-shell-extension-caffeine gnome-shell-extension-blur-my-shell rclone tailscale android-tools gparted micro gnome-shell-extension-background-logo bluefin-schemas libfprint-tod-goodix bazaar
 dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9
-dnf -y remove gnome-extensions-app gnome-software-rpm-ostree
+dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control
 dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:ublue-os:staging \
     gnome-software gnome-software
