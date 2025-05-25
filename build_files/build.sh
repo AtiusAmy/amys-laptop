@@ -37,3 +37,4 @@ dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable ublue-os/packages
 
 #### Example for enabling a System Unit File
+echo "import \"/usr/share/ublue-os/just/amy.just\"" >> /usr/share/ublue-os/justfile
