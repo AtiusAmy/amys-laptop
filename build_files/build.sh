@@ -26,8 +26,6 @@ dnf5 swap -y \
     gnome-software gnome-software
 dnf5 versionlock add gnome-software
 
-dnf5 -y swap mutter mutter-0:48.1-1.fc42 && \
-dnf5 versionlock add mutter
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
