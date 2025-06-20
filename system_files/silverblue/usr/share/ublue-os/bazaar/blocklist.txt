@@ -1,0 +1,8 @@
+com.brave.Browser
+io.github.ungoogled_software.ungoogled_chromium
+org.mozilla.firefox
+app.zen_browser.zen
+one.ablaze.floorp
+org.garudalinux.firedragon
+org.kde.falkon
+io.gitlab.librewolf-community
