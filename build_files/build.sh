@@ -9,9 +9,9 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf5 -y copr enable ublue-os/staging
-dnf5 -y copr enable ublue-os/packages
-dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9
+dnf5 -y copr enable ublue-os/staging fedora-42-x86_64
+dnf5 -y copr enable ublue-os/packages fedora-42-x86_64
+dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9 fedora-42-x86_64
 
 
 dnf5 swap -y \
