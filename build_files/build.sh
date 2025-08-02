@@ -21,28 +21,6 @@ dnf5 swap -y \
 dnf5 install -y adw-gtk3-theme gnome-shell-extension-appindicator gnome-shell-extension-logo-menu gnome-shell-extension-caffeine gnome-shell-extension-blur-my-shell tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas libfprint-tod-goodix bazaar
 dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control gnome-software
 
-#!/usr/bin/bash
-set -eoux pipefail
-
-
-# Adds the addons repo
-dnf5 copr enable -y bieszczaders/kernel-cachyos-addons
-
-# Adds required package for the scheduler
-dnf5 install -y \
-    --enablerepo="copr:copr.fedorainfracloud.org:bieszczaders:kernel-cachyos-addons" \
-    --allowerasing \
-    libcap-ng libcap-ng-devel procps-ng procps-ng-devel uksmd libbpf scx-scheds
-
-
-systemctl enable scx_loader.service
-
-tee /etc/scx_loader.toml > /dev/null <<EOF
-default_sched = "scx_bpfland" # Possible values : "scx_bpfland", "scx_flash", "scx_lavd", "scx_p2dq", "scx_tickless", "scx_rustland", "scx_rusty"
-default_mode = "Auto" # Possible values: "Auto", "Gaming", "LowLatency", "PowerSave".
-EOF
-
-
 # Adds the main kernel repo
 dnf5 copr enable -y kwizart/kernel-longterm-6.12 fedora-42-x86_64
 
