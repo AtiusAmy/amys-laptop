@@ -44,7 +44,7 @@ EOF
 
 
 # Adds the main kernel repo
-dnf5 copr enable -y kwizart/kernel-longterm-6.12
+dnf5 copr enable -y kwizart/kernel-longterm-6.12 fedora-42-x86_64
 
 # Remove useless kernels
 readarray -t OLD_KERNELS < <(rpm -qa 'kernel-*')
@@ -98,6 +98,7 @@ sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/tailscale.repo
 dnf5 -y copr disable antiderivative/libfprint-tod-goodix-0.0.9
 dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable ublue-os/packages
+dnf5 -y copr disable kwizart/kernel-longterm-6.12
 
 #### Example for enabling a System Unit File
 echo "import \"/usr/share/ublue-os/just/amy.just\"" >> /usr/share/ublue-os/justfile
