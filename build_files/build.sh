@@ -52,7 +52,8 @@ fi
 
 # Lock kernel packages
 dnf5 versionlock add "kernel-longterm-${KERNEL_VERSION}" || true
-dnf5 versionlock add "kernel-longterm-headers-${KERNEL_VERSION}" || true
+dnf5 versionlock add "kernel-longterm-module-${KERNEL_VERSION}" || true
+dnf5 versionlock add "kernel-longterm-core-${KERNEL_VERSION}" || true
 
 
 # Thank you @renner for this part
