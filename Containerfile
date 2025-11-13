@@ -26,7 +26,7 @@ RUN \
 config=$'\
 type: gnome-extensions \n\
 install: \n\
-    - Wiggle # https://extensions.gnome.org/extension/6784/wiggle/ \n\
+    - Caffeine # https://extensions.gnome.org/extension/517/caffeine/ \n\
 ' && \
 /tmp/scripts/run_module.sh "$(echo "$config" | yq eval '.type')" "$(echo "$config" | yq eval -o=j -I=0)"
 
