@@ -20,9 +20,12 @@ dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint libfprint-tod
 # this installs a package from fedora repos
-dnf5 install -y adw-gtk3-theme gnome-shell-extension-appindicator gnome-shell-extension-logo-menu gnome-shell-extension-blur-my-shell tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas libfprint-tod-goodix
+dnf5 install -y adw-gtk3-theme gnome-shell-extension-appindicator gnome-shell-extension-logo-menu gnome-shell-extension-blur-my-shell tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas bazaar libfprint-tod-goodix
 dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control gnome-software
 
+wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
+dnf5 install -y ./protonvpn-stable-release-1.0.3-1.noarch.rpm
+dnf5 install -y proton-vpn-gnome-desktop 
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
