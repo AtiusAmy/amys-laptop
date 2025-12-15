@@ -23,9 +23,6 @@ dnf5 swap -y \
 dnf5 install -y adw-gtk3-theme gnome-shell-extension-appindicator gnome-shell-extension-logo-menu gnome-shell-extension-blur-my-shell tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas bazaar libfprint-tod-goodix
 dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control gnome-software
 
-wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.3-1.noarch.rpm"
-dnf5 install -y ./protonvpn-stable-release-1.0.3-1.noarch.rpm
-dnf5 install -y proton-vpn-gnome-desktop 
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
