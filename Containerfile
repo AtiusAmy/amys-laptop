@@ -28,7 +28,7 @@ type: gnome-extensions \n\
 install: \n\
     - Caffeine # https://extensions.gnome.org/extension/517/caffeine/ \n\
     - AppIndicator and KStatusNotifierItem Support # https://extensions.gnome.org/extension/615/appindicator-support/ \n\
-    - Blur my Shell # https://extensions.gnome.org/extension/3193/blur-my-shell/
+    - Blur my Shell # https://extensions.gnome.org/extension/3193/blur-my-shell/ \n\
 ' && \
 /tmp/scripts/run_module.sh "$(echo "$config" | yq eval '.type')" "$(echo "$config" | yq eval -o=j -I=0)"
 
