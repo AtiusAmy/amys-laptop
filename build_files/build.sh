@@ -39,7 +39,7 @@ dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control 
 dnf5 -y copr disable antiderivative/libfprint-tod-goodix-0.0.9
 dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable ublue-os/packages
-dnf5 -y copr disable secureblue/bubblejail
+#dnf5 -y copr disable secureblue/bubblejail
 dnf5 -y copr disable secureblue/branding
 dnf5 -y copr disable secureblue/crane
 dnf5 -y copr disable secureblue/slsa-verifier
