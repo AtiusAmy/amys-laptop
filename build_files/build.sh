@@ -40,11 +40,11 @@ dnf5 -y copr disable antiderivative/libfprint-tod-goodix-0.0.9
 dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable ublue-os/packages
 #dnf5 -y copr disable secureblue/bubblejail
-dnf5 -y copr disable secureblue/branding
-dnf5 -y copr disable secureblue/crane
-dnf5 -y copr disable secureblue/slsa-verifier
-dnf5 -y copr disable secureblue/hardened_malloc
-dnf5 -y copr disable secureblue/run0edit
+#dnf5 -y copr disable secureblue/branding
+#dnf5 -y copr disable secureblue/crane
+#dnf5 -y copr disable secureblue/slsa-verifier
+#dnf5 -y copr disable secureblue/hardened_malloc
+#dnf5 -y copr disable secureblue/run0edit
 
 chmod +x /usr/share/gnome-shell/extensions/Battery-Health-Charging@maniacx.github.com/tool/installer.shn
 
