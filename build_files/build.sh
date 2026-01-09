@@ -34,6 +34,8 @@ dnf5 -y copr disable antiderivative/libfprint-tod-goodix-0.0.9
 dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable ublue-os/packages
 
+chmod +x /usr/share/gnome-shell/extensions/Battery-Health-Charging@maniacx.github.com/tool/installer.s
+
 
 #### Example for enabling a System Unit File
 echo "import \"/usr/share/ublue-os/just/amy.just\"" >> /usr/share/ublue-os/justfile
