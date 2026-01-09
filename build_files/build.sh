@@ -16,7 +16,7 @@ dnf5 -y copr enable ublue-os/packages ${CHROOT}
 dnf5 -y copr enable antiderivative/libfprint-tod-goodix-0.0.9 ${CHROOT}
 
 
-dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fedora/tailscale.repo --overwrite
 dnf config-manager setopt tailscale-stable.enabled=0
 dnf -y install --enablerepo='tailscale-stable' tailscale
 
