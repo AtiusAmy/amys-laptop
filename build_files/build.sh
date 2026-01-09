@@ -20,7 +20,7 @@ dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint libfprint-tod
 # this installs a package from fedora repos
-dnf5 install -y adw-gtk3-theme gnome-shell-extension-appindicator gnome-shell-extension-logo-menu gnome-shell-extension-blur-my-shell tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas libfprint-tod-goodix
+dnf5 install -y adw-gtk3-theme tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas libfprint-tod-goodix
 dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control gnome-software
 
 # Use a COPR Example:
@@ -37,3 +37,19 @@ dnf5 -y copr disable ublue-os/packages
 
 #### Example for enabling a System Unit File
 echo "import \"/usr/share/ublue-os/just/amy.just\"" >> /usr/share/ublue-os/justfile
+
+echo "::group:: ===$(basename "$0")==="
+
+dnf5 -y install glib2-devel meson sassc cmake dbus-devel git
+
+git clone https://github.com/ublue-os/Logomenu /usr/share/gnome-shell/extensions/logomenu@aryan_k
+
+# Logo Menu
+# xdg-terminal-exec is required for this extension as it opens up terminals using that script
+install -Dpm0755 -t /usr/bin /usr/share/gnome-shell/extensions/logomenu@aryan_k/distroshelf-helper
+install -Dpm0755 -t /usr/bin /usr/share/gnome-shell/extensions/logomenu@aryan_k/missioncenter-helper
+glib-compile-schemas --strict /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas
+
+dnf5 -y remove glib2-devel meson sassc cmake dbus-devel
+
+echo "::endgroup::"
