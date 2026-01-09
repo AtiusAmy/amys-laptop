@@ -20,7 +20,7 @@ dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint libfprint-tod
 # this installs a package from fedora repos
-dnf5 install -y adw-gtk3-theme tailscale gparted micro gnome-shell-extension-background-logo bluefin-schemas bazaar libfprint-tod-goodix
+dnf5 install -y adw-gtk3-theme tailscale gparted gnome-shell-extension-background-logo bluefin-schemas bazaar libfprint-tod-goodix
 dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control gnome-software
 
 # Use a COPR Example:
@@ -50,6 +50,6 @@ install -Dpm0755 -t /usr/bin /usr/share/gnome-shell/extensions/logomenu@aryan_k/
 install -Dpm0755 -t /usr/bin /usr/share/gnome-shell/extensions/logomenu@aryan_k/missioncenter-helper
 glib-compile-schemas --strict /usr/share/gnome-shell/extensions/logomenu@aryan_k/schemas
 
-dnf5 -y remove glib2-devel meson sassc cmake dbus-devel
+dnf5 -y remove glib2-devel meson sassc cmake dbus-devel perl-Digest
 
 echo "::endgroup::"
