@@ -46,8 +46,6 @@ dnf5 -y copr disable ublue-os/packages
 #dnf5 -y copr disable secureblue/hardened_malloc
 #dnf5 -y copr disable secureblue/run0edit
 
-chmod +x /usr/share/gnome-shell/extensions/Battery-Health-Charging@maniacx.github.com/tool/installer.sh
-
 
 #### Example for enabling a System Unit File
 echo "import \"/usr/share/ublue-os/just/amy.just\"" >> /usr/share/ublue-os/justfile
