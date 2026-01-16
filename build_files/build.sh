@@ -26,8 +26,8 @@ dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint libfprint-tod
 # this installs a package from fedora repos
-dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo bazaar libfprint-tod-goodix
-dnf -y remove gnome-extensions-app gnome-software-rpm-ostree malcontent-control gnome-software
+dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell bazaar libfprint-tod-goodix
+dnf -y remove gnome-extensions-app gnome-software* malcontent-control
 
 # Use a COPR Example:
 #
