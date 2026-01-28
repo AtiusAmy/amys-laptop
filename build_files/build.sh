@@ -50,7 +50,6 @@ dnf5 -y copr disable ublue-os/packages
 #dnf5 -y copr disable secureblue/run0edit
 
 systemctl enable hardinfo2
-modprobe ee1003
 
 #### Example for enabling a System Unit File
 echo "import \"/usr/share/ublue-os/just/amy.just\"" >> /usr/share/ublue-os/justfile
