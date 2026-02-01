@@ -20,16 +20,18 @@ dnf config-manager addrepo --from-repofile=https://pkgs.tailscale.com/stable/fed
 dnf config-manager setopt tailscale-stable.enabled=0
 dnf -y install --enablerepo='tailscale-stable' tailscale
 
+dnf config-manager addrepo --from-repofile=https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo --overwrite
+dnf config-manager setopt dangerzone.enabled=0
+dnf -y install --enablerepo='dangerzone' dangerzone
+
 systemctl enable tailscaled
 
 dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint libfprint-tod
 # this installs a package from fedora repos
-sed -i 's@enabled=0@enabled=1@g' /etc/yum.repos.d/dangerzone.repo
-dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell bazaar libfprint-tod-goodix uupd hardinfo2 sysbench dangerzone iperf3 vulkan-tools
+dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell bazaar libfprint-tod-goodix uupd hardinfo2 sysbench iperf3 vulkan-tools
 dnf -y remove gnome-extensions-app gnome-software* malcontent-control
-sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/dangerzone.repo
 
 sed -i 's|uupd|& --disable-module-distrobox|' /usr/lib/systemd/system/uupd.service
 systemctl enable uupd.timer
