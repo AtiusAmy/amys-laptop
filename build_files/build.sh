@@ -31,7 +31,7 @@ dnf5 swap -y \
     libfprint libfprint-tod
 # this installs a package from fedora repos
 dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell libfprint-tod-goodix uupd hardinfo2 sysbench iperf3 vulkan-tools 
-dnf -y remove gnome-extensions-app gnome-software* malcontent-control
+dnf -y remove gnome-extensions-app gnome-software*
 dnf5 install -y https://github.com/RedCommand/flatpak-alias/releases/download/v0.1.4/flatpak-alias_0.1.4_linux_amd64.rpm
 
 sed -i 's|uupd|& --disable-module-distrobox|' /usr/lib/systemd/system/uupd.service
