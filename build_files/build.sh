@@ -9,7 +9,7 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-CHROOT="fedora-43-x86_64"
+CHROOT="fedora-44-x86_64"
 
 dnf5 -y copr enable ublue-os/staging ${CHROOT}
 dnf5 -y copr enable ublue-os/packages ${CHROOT}
