@@ -30,7 +30,7 @@ dnf5 swap -y \
     --repo=copr:copr.fedorainfracloud.org:antiderivative:libfprint-tod-goodix-0.0.9 \
     libfprint libfprint-tod
 # this installs a package from fedora repos
-dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell libfprint-tod-goodix uupd hardinfo2 sysbench iperf3 vulkan-tools 
+dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell libfprint-tod-goodix uupd hardinfo2 sysbench iperf3 vulkan-tools --skip-unavailable
 dnf -y remove gnome-extensions-app gnome-software*
 dnf5 install -y https://github.com/RedCommand/flatpak-alias/releases/download/v0.1.4/flatpak-alias_0.1.4_linux_amd64.rpm
 
