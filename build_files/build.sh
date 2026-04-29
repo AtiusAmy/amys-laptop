@@ -22,7 +22,7 @@ dnf -y install --enablerepo='tailscale-stable' tailscale
 
 #dnf config-manager addrepo --from-repofile=https://packages.freedom.press/yum-tools-prod/dangerzone/dangerzone.repo --overwrite
 dnf config-manager setopt dangerzone.enabled=0
-dnf -y install --enablerepo='dangerzone' dangerzone
+dnf -y install --enablerepo='dangerzone' dangerzone --skip-unavailable
 
 systemctl enable tailscaled
 
