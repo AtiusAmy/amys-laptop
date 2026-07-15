@@ -37,9 +37,7 @@ install: \n\
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
-    ostree container commit
-    
+    /tmp/build.sh    
 ### LINTING
 ## Verify final image and contents are correct.
 
