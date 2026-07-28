@@ -33,6 +33,7 @@ dnf5 swap -y \
 dnf5 install -y adw-gtk3-theme gparted gnome-shell-extension-background-logo gnome-shell-extension-pop-shell libfprint-tod-goodix uupd hardinfo2 sysbench iperf3 vulkan-tools --skip-unavailable
 dnf -y remove gnome-extensions-app gnome-software*
 dnf5 install -y https://github.com/RedCommand/flatpak-alias/releases/download/v0.1.4/flatpak-alias_0.1.4_linux_amd64.rpm
+dnf5 install -y https://github.com/frostyard/chairlift/releases/download/v0.10.0/frostyard-chairlift-0.10.0-1.x86_64.rpm
 
 sed -i 's|uupd|& --disable-module-distrobox|' /usr/lib/systemd/system/uupd.service
 systemctl enable uupd.timer
