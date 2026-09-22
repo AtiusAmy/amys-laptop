@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=usr/lib/rstudio/rstudio %F LD_PRELOAD=''
+Exec=/usr/lib/rstudio/rstudio %F LD_PRELOAD=''
 Icon=rstudio
 Type=Application
 Terminal=false
