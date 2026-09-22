@@ -54,7 +54,8 @@ dnf5 -y copr disable ublue-os/packages
 #dnf5 -y copr disable secureblue/slsa-verifier
 #dnf5 -y copr disable secureblue/hardened_malloc
 #dnf5 -y copr disable secureblue/run0edit
-
+dnf5 -y install https://download1.rstudio.org/electron/rhel9/x86_64/rstudio-2026.09.0-174-x86_64.rpm
+dnf5 -y install nss dbus-libs atk at-spi2-atk cups-libs gtk3 mesa-libgbm R
 systemctl enable hardinfo2
 
 #### Example for enabling a System Unit File
