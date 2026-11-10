@@ -9,7 +9,7 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-CHROOT="fedora-44-x86_64"
+CHROOT="fedora-45-x86_64"
 
 dnf5 -y copr enable ublue-os/staging ${CHROOT}
 dnf5 -y copr enable ublue-os/packages ${CHROOT}
@@ -54,8 +54,8 @@ dnf5 -y copr disable ublue-os/packages
 #dnf5 -y copr disable secureblue/slsa-verifier
 #dnf5 -y copr disable secureblue/hardened_malloc
 #dnf5 -y copr disable secureblue/run0edit
-dnf5 -y install https://download1.rstudio.org/electron/rhel9/x86_64/rstudio-2026.09.0-174-x86_64.rpm
-dnf5 -y install nss dbus-libs atk at-spi2-atk cups-libs gtk3 mesa-libgbm R
+#dnf5 -y install https://download1.rstudio.org/electron/rhel9/x86_64/rstudio-2026.09.0-174-x86_64.rpm
+#dnf5 -y install nss dbus-libs atk at-spi2-atk cups-libs gtk3 mesa-libgbm R
 systemctl enable hardinfo2
 
 #### Example for enabling a System Unit File
